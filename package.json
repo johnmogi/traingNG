@@ -1,0 +1,13 @@
+{
+  "name": "train-ng",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "git": "git add --all && git commit -",
+    "postgit": "git push --all"
+    },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

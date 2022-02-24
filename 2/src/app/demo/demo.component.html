@@ -1,0 +1,10 @@
+<p>interactive counter : {{counter}}</p>
+
+<button (click)="inc()">+</button>
+<button (click)="dec()">-</button>
+<br/>
+item : {{item.name | uppercase }}  , price : {{item.price | currency:'ILS'}}
+<br/>
+date : {{item.date | date: 'medium' }}
+
+name: <input [(ngModel)]="item.name" type="text" id="name">
