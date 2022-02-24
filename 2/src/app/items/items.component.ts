@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Item from '../Item';
 import { ITEMS } from './itemsStore';
 
 @Component({
@@ -7,10 +8,14 @@ import { ITEMS } from './itemsStore';
   styleUrls: ['./items.component.scss']
 })
 export class ItemsComponent implements OnInit {
-  items = ITEMS
-  constructor() { }
+  items = ITEMS;
+  selectedItem : Item | null = null;
 
+  constructor() { }
   ngOnInit(): void {
   }
-
+  onSelect(item: Item){
+    this.selectedItem= item
+     console.log(item);
+  }
 }

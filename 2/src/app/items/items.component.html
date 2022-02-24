@@ -1,8 +1,22 @@
 <p>items works!</p>
 <ul>
-    <li *ngFor="let item of items">
+    <li *ngFor="let item of items; odd as c"
+    (click)="onSelect(item)"
+    [class.selected]="item ===selectedItem"
+    >
         
+       <p *ngIf=c >{{item.date}}</p>
         <span class="badge">{{item.price}}</span> {{item.name}}
     </li>
 
 </ul>
+
+<!-- {{selectedItem | json}} -->
+<!-- <div *ngIf="!selectedItem">
+    please select an item
+</div> -->
+<div *ngIf="selectedItem">
+    <h2 >Selected Item details: {{selectedItem.name | uppercase}}</h2>
+    <p>date: {{selectedItem.date | date}}</p>
+    <p>price: {{selectedItem.price | currency:'ILS'}}</p>
+</div>
