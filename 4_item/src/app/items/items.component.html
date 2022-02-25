@@ -1,0 +1,12 @@
+<p>items works!</p>
+
+<div class="items" *ngFor="let item of items" [class.selected]="item === selectedItem">
+    
+    <button (click)="onSelect(item)">
+        id: {{item.id}}
+        name: {{item.name}}
+        price: {{item.price}}
+    </button>
+</div>
+<app-item [item]="selectedItem"></app-item>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->

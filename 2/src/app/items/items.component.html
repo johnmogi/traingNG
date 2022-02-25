@@ -2,7 +2,7 @@
 <ul>
     <li *ngFor="let item of items; odd as c"
     (click)="onSelect(item)"
-    [class.selected]="item ===selectedItem"
+    [class.selected]="item === selectedItem"
     >
         
        <p *ngIf=c >{{item.date}}</p>
@@ -11,12 +11,4 @@
 
 </ul>
 
-<!-- {{selectedItem | json}} -->
-<!-- <div *ngIf="!selectedItem">
-    please select an item
-</div> -->
-<div *ngIf="selectedItem">
-    <h2 >Selected Item details: {{selectedItem.name | uppercase}}</h2>
-    <p>date: {{selectedItem.date | date}}</p>
-    <p>price: {{selectedItem.price | currency:'ILS'}}</p>
-</div>
+<!-- <app-item-detail [item]="selectedItem"></app-item-detail>   -->

@@ -1,0 +1,7 @@
+<p>item-detail works!</p>
+
+<div *ngIf="item">
+    <h2 >Selected Item details: {{item.name | uppercase}}</h2>
+    <p>date: {{item.date | date}}</p>
+    <p>price: {{item.price | currency:'ILS'}}</p>
+</div>
